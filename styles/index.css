@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&family=Satisfy&family=Poppins:ital,wght@0,600;1,400&display=swap");
+:root {
+  --height: 1rem;
+  --hue-color: 190;
+  --accent: #fff7fa;
+  --secondary: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+  z-index: 1;
+}
+input,
+button,
+footer {
+  font-family: "Poppins", serif;
+}
+image {
+  max-width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  line-height: 1;
+  font-family: "Poppins", serif;
+}
+section {
+  margin: 3rem 0;
+}
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+.container {
+  padding: 0 1.5em;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 1rem 0 0 0;
+}
+h1 {
+  font-size: clamp(3rem, 10vw, 10rem);
+  text-transform: capitalize;
+}
+h2 {
+  text-transform: capitalize;
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+h3 {
+  font-size: clamp(1.5em, 10vw, 2rem);
+}
+
+header {
+  padding: var(--height) 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__link {
+  position: relative;
+}
+.nav__link::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  background-color: orange;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 200ms ease-in;
+}
+.nav__link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.logo {
+  font-family: "Satisfy", cursive;
+  font-size: 1.125rem;
+  color: orange;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+li {
+  cursor: pointer;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  position: relative;
+  border: none;
+}
+.gradient {
+  color: var(--secondary);
+  background-color: #ffffff;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  transition: all 200ms ease-in;
+}
+.gradient::before {
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  top: -3px;
+  bottom: -3px;
+  right: -3px;
+  left: -3px;
+  background-color: #ffffff;
+  z-index: -1;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+.gradient:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .mobile-nav {
+    font-size: 2rem;
+    padding: 0;
+    display: block;
+    position: fixed;
+    top: 21px;
+    right: 10px;
+    background-color: transparent;
+    color: var(--secondary);
+    z-index: 1001;
+  }
+  .primary-navigation {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    height: 100vh;
+    left: 100%;
+    background-color: var(--accent);
+    z-index: 1000;
+    flex-direction: column;
+    padding: min(10rem, 30vh) 2em;
+    transition: left 300ms ease-in;
+  }
+  .primary-navigation.open {
+    left: 50%;
+  }
+}
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}
+.main {
+  margin-top: calc(5 * var(--height));
+  z-index: 100;
+}
+
+.bg-dark {
+  background-color: var(--secondary);
+  color: var(--accent);
+  padding: 5rem 0;
+}
+.banner__btn + .banner__btn {
+  margin: 0.5rem 0;
+}
+.project {
+  margin-block: 2rem;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 3rem;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+img {
+  width: 100%;
+}
+.card {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .project {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .card img {
+    width: 100%;
+  }
+}
+.flex {
+  display: flex;
+  gap: 2rem;
+}
+.subscribe {
+  background-color: #171717;
+  padding: 5rem;
+  z-index: -10;
+}
+.subscribe h3 {
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+input {
+  width: 100%;
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--accent);
+  padding: 0.5rem 0;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+  }
+  .subscribe {
+    padding: 1rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+}

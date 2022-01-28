@@ -1,4 +1,3 @@
-AOS.init();
 const navToggle = document.querySelector(".mobile-nav");
 const PrimaryNav = document.querySelector(".primary-navigation");
 const navIcon = document.getElementById("primary-menu-icon");

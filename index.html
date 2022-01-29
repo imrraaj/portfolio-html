@@ -11,62 +11,83 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 
-<body>
+<body data-isDark="true">
     <header id="header">
         <nav class="container">
             <a href="#" class="logo">Raj Patel </a>
             <ul class="primary-navigation">
                 <li><a href="#" class="nav__link">home</a></li>
-                <li><a href="#" class="nav__link">about</a></li>
-                <li><a href="#" class="nav__link">buy</a></li>
-                <li><a href="#" class="nav__link">contact</a></li>
+                <li><a href="#about" class="nav__link">about</a></li>
+                <li><a href="#projects" class="nav__link">projects</a></li>
+                <li><a href="#contact" class="nav__link">contact</a></li>
+                <li><a href="#" class="nav__link" id="darkModeToggle">Dark mode</a></li>
             </ul>
         </nav>
         <button class="mobile-nav">
             <i class="bx bx-menu-alt-right" id="primary-menu-icon"></i>
         </button>
     </header>
-    <section class="container main">
-        <h1 data-aos="fade-up" data-aos-duration="1000">lorem ispum sit amet</h1>
-        <p data-aos="fade-up" data-aos-duration="1000"> Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-            centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <section class="container main" id="#">
+        <h1 class="gradient-text">Raj Patel</h1>
+        <p> Computer science major student with passion of developing scalable web applications and working across full
+            stack. Looking for
+            joining the team/company to continue growing my skill set while collaborating effectively with peer
+            developers for the
+            development process. I have experience in creating dynamic web applications using React JS and
+            ExpressJS.Easily migrate over the technologies required. Have some work for me? Get in touch with me!
         </p>
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <button class="banner__btn gradient">Github</button>
-            <button class="banner__btn gradient">Linked In</button>
-            <button class="banner__btn gradient">Twitter</button>
+        <div class="btns">
+            <button class="banner__btn gradient"><a href="mailto:rajpatel10953@gmail.com">Email</a></button>
+            <button class="banner__btn gradient"><a href="https://github.com/imrraaj"
+                    target="_blank">Github</a></button>
+            <button class="banner__btn gradient"><a href="https://www.linkedin.com/in/raj-k-patel21"
+                    target="_blank">Linked In</a></button>
         </div>
     </section>
 
-    <section class="bg-dark">
+    <section class="bg-dark" id="about">
         <div class="container flex">
-            <div data-aos="fade-left" data-aos-duration="2000">
-                <h3>First thing </h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s,and scrambled it to make a type specimen book.
+            <div class="about__card">
+                <h3>SKILLS & PROFICIENCY</h3>
+                <p>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript </li>
+                    <li>Node JS </li>
+                    <li>React JS </li>
+                    <li>REST APIs </li>
+                    <li>React Native </li>
+                    <li>C++ </li>
+                    <li>Google Firebase</li>
+
                 </p>
             </div>
-            <div data-aos="zoom-in" data-aos-duration="2000">
-                <h3>First thing </h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s,and scrambled it to make a type specimen book.
-                </p>
+            <div class="about__card w-lg">
+                <h3>Educational Bacground</h3>
+                <ul class="edu">
+                    <li>
+                        <span>Bachelor's Degree in Computer Science Engineering </span>
+                        Institute of technology Nirma University<br> Ahmedabad <br>
+                        2020-2024
+                    </li>
+                    <li>
+                        <span>Highschool Certification</span>
+                        M.K.Patel High school, <br> Ahmedabad <br>
+                        2018-2020
+                    </li>
+
+                </ul>
             </div>
-            <div data-aos="fade-right" data-aos-duration="2000">
-                <h3>First thing </h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, and scrambled it to make a type specimen book.
+            <div class="about__card">
+                <h3>Experience</h3>
+                <p>Any Experience that i gain over the period of time will be displayed here
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="container" data-aos="fade-up" data-aos-duration="1000">
-        <h2>hello world</h2>
+    <section class="container" id="projects">
+        <h2 class="project__heading">Projects I have created</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
             at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
             as opposed to using 'Content here, content here', making it look like readable English. Many desktop
@@ -76,53 +97,67 @@
     </section>
 
     <section class="project container">
-        <div class="card" data-aos="fade-right" data-aos-duration="1000">
-            <img src="https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
-                alt="card">
-            <h2>Card</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text
-            </p>
+        <div class="card">
+            <div class="card__image">
+                <a href="https://thirsty-beaver-b867cc.netlify.app/" target="_blank">
+                    <img src="./img/CloudNotes.png" alt="The cloud notes project created using ReactJS and ExpressJS">
+                </a>
+            </div>
+            <div class="card__content">
+                <h3>Cloud Notes</h3>
+                <p>
+                    <span>Built using: ReactJS, ExpressJs, MongoDB, Tailwind CSS</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a officiis odio, suscipit magni
+                    itaque vitae ut exercitationem harum veniam!
+                </p>
+                <a href="https://thirsty-beaver-b867cc.netlify.app/" target="_blank" class="project__link">Visit
+                    site</a>
+            </div>
         </div>
 
-        <div class="card" data-aos="fade-left" data-aos-duration="1000">
-            <img src="https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
-                alt="card">
-            <h2>Card</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text
-            </p>
+        <div class="card">
+            <div class="card__image">
+                <a href="https://netflix-clone-15ce6.web.app/" target="_blank">
+                    <img src="./img/netflix-clone.png" alt="The netflix-clone project that I created using ReactJS">
+                </a>
+            </div>
+            <div class="card__content">
+                <h3>Netflix Clone</h3>
+                <p>
+                    <span>Built using: ReactJS, The MovieDB API, Google Firebase</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a officiis odio, suscipit magni
+                    itaque vitae ut exercitationem harum veniam!
+                </p>
+                <a href="https://netflix-clone-15ce6.web.app/" target="_blank" class="project__link">Visit site</a>
+            </div>
         </div>
-
-        <div class="card" data-aos="fade-right" data-aos-duration="1000">
-            <img src="https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
-                alt="card">
-            <h2>Card</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text
-            </p>
-        </div>
-
-        <div class="card" data-aos="fade-left" data-aos-duration="1000">
-            <img src="https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
-                alt="card">
-            <h2>Card</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text
-            </p>
+        <div class="card">
+            <div class="card__image">
+                <a href="/" target="_blank">
+                    <img src="./img/portfolio.png" alt="The Portfolio that I have created using HTML, CSS and JS">
+                </a>
+            </div>
+            <div class="card__content">
+                <h3>Portfolio site</h3>
+                <p>
+                    <span>Built using: HTML, CSS, JS</span><br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a officiis odio, suscipit magni
+                    itaque vitae ut exercitationem harum veniam!
+                </p>
+                <a href="/" target="_blank" class="project__link">Visit site</a>
+            </div>
         </div>
     </section>
-    <section class="subscribe">
-        <div class="container" data-aos="fade-in" data-aos-duration="1000">
-            <h3>Subscribe to our newsletter
+    <section class="subscribe" id="contact">
+        <div class="container">
+            <h3>Send a message
                 <br> to get all the updates
             </h3>
             <input id="input" type="email" name="email" placeholder="abc@example.com" />
-            <button type="submit" class="gradient">Subscribe</button>
+            <input id="input" type="text" name="name" placeholder="Your name goes here" />
+            <textarea id="input" type="text" name="message" placeholder="Your message"></textarea>
+
+            <button type="submit">Subscribe</button>
         </div>
     </section>
 

@@ -3,9 +3,9 @@
   --height: 1rem;
   --border: 3px;
   --hue-color: 190;
-  --accent: #fff7fa;
+  --accent: #ffffff;
   --links: #ffa500;
-  --secondary: #171717;
+  --secondary: #2A3D45;
   --gradient: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
 }
 
@@ -30,9 +30,9 @@ body {
 
 /* For toggling */
 body[data-isDark="true"] {
-  --accent: #171717;
+  --accent: #2A3D45;
   --links: #84fab0;
-  --secondary: #fff7fa;
+  --secondary: #EEF4D4;
   --gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   background-color: var(--accent);
   color: var(--secondary);
@@ -263,15 +263,22 @@ button {
   text-align: center;
   color: white;
 }
+.project__link{
+  font-weight: 800;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+}
 .card {
   width: 100%;
 }
 .card__image {
-  height: 300px;
+  height: 350px;
 }
 .card__image img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 .card__content h3{
   position: relative;
@@ -324,6 +331,11 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.subscribe__btn{
+  background:none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
 
 @media screen and (max-width: 786px) {
   .about__card {

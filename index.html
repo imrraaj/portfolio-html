@@ -13,7 +13,7 @@
 </head>
 
 <body data-isDark="false">
-    <header id="header">
+    <header id="header" class="sticky">
         <nav class="container">
             <a href="#" class="logo">Raj Patel </a>
             <ul class="primary-navigation">
@@ -29,13 +29,13 @@
         </button>
     </header>
     <section class="container main" id="#">
-        <h1 class="gradient-text">Raj Patel</h1>
+        <h1 class="gradient-text animate">Raj Patel</h1>
         <p> Computer science major student with passion of developing scalable web applications and working across full
             stack. Looking for
             joining the team/company to continue growing my skill set while collaborating effectively with peer
             developers for the
-            development process. I have experience in creating dynamic web applications using React JS and
-            ExpressJS.Easily migrate over the technologies required. Have some work for me? Get in touch with me!
+            development process. I have experience in creating dynamic web applications using <b>React JS </b> and
+            <b>Express JS</b>. Easily migrate over the technologies required. Have some work for me? Get in touch with me!
         </p>
         <div class="btns">
             <button class="banner__btn gradient"><a href="mailto:rajpatel10953@gmail.com">Email</a></button>
@@ -46,9 +46,9 @@
         </div>
     </section>
 
-    <section class="bg-dark" id="about">
+    <section class="" id="about">
         <div class="container flex">
-            <div class="about__card">
+            <div class="about__card animate">
                 <h3>SKILLS & PROFICIENCY</h3>
                 <p>
                     <li>HTML</li>
@@ -63,7 +63,7 @@
 
                 </p>
             </div>
-            <div class="about__card w-lg">
+            <div class="about__card w-lg animate">
                 <h3>Educational Background</h3>
                 <ul class="edu">
                     <li>
@@ -79,16 +79,16 @@
 
                 </ul>
             </div>
-            <div class="about__card">
+            <div class="about__card animate">
                 <h3>Experience</h3>
-                <p>Any Experience that i gain over the period of time will be displayed here
+                <p>Any Experience that I gain over the period of time will be displayed here
                 </p>
             </div>
         </div>
     </section>
 
     <section class="container" id="projects">
-        <h2 class="project__heading">Projects I have created</h2>
+        <h2 class="project__heading">Projects</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
             at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
             as opposed to using 'Content here, content here', making it look like readable English. Many desktop
@@ -149,7 +149,7 @@
             </div>
         </div>
     </section>
-    <section class="subscribe" id="contact">
+    <section class="subscribe animate" id="contact">
         <div class="container">
             <h3>Send a message
                 <br> to get all the updates
@@ -164,9 +164,24 @@
 
     <footer>
         <a href="#" class="logo">Raj Patel</a>
-        <p>&copy;2022. All rights reserved.</p>
+        <p class="footer__tagline">&copy;2022. All rights reserved.</p>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+        integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const tl = gsap.timeline({ defaults: { ease: "power3.inOut", duration: 2} });
+        tl.to('h1', { scrollTrigger: 'h1', clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, y: 0});
+        gsap.to('.about__card', { scrollTrigger: '.about__card', stagger: .3, clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, y: 0 });
+        gsap.to('.subscribe', {
+            scrollTrigger: '.subscribe',
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, y: 0
+        });
+    </script>
 </body>
 
 </html>

@@ -4,9 +4,10 @@
   --border: 3px;
   --hue-color: 190;
   --accent: #ffffff;
-  --links: #ffa500;
+  --links: #43aa8b;
   --secondary: #2A3D45;
-  --gradient: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  /* --gradient: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
+  --gradient: linear-gradient(90deg, #43aa8b 0%, #4d908e 100%);
 }
 
 * {
@@ -19,7 +20,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+code{
+  background-color: var(--secondary);
+}
 
 body {
   line-height: 1.6;
@@ -30,12 +33,18 @@ body {
 
 /* For toggling */
 body[data-isDark="true"] {
-  --accent: #2A3D45;
+  /* --accent: #303b3f;
   --links: #84fab0;
   --secondary: #EEF4D4;
   --gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   background-color: var(--accent);
-  color: var(--secondary);
+  color: var(--secondary); */
+  --accent: #303b3f;
+  --links: #43aa8b;
+  --secondary: #EEF4D4;
+  background-color: var(--accent);
+    color: var(--secondary);
+  --gradient: linear-gradient(90deg, #43aa8b 0%, #4d908e 100%);
 }
 input,
 textarea,
@@ -53,7 +62,7 @@ h3 {
 }
 
 section {
-  margin: 3rem 0;
+  margin: var(--height,3rem) 0;
 }
 
 a {
@@ -97,7 +106,13 @@ header {
   z-index: 10;
   background-color: transparent;
 }
-
+header.sticky{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: var(--accent);
+  box-shadow: inset 1px 0px 1px var(--secondary);
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -106,6 +121,7 @@ nav {
 
 .nav__link {
   position: relative;
+  font-weight: 600;
 }
 .nav__link::before {
   content: "";
@@ -148,6 +164,25 @@ button {
   border: none;
 }
 
+.animate{
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @supports (-webkit-background-clip: text) {
   .gradient-text {
     background: var(--gradient);
@@ -182,7 +217,9 @@ button {
 }
 .gradient:hover {
   background-color: transparent;
-  color: var(--accent);
+}
+.gradient:hover > a{
+  color:whitesmoke;
 }
 
 .mobile-nav {
@@ -218,13 +255,17 @@ button {
     margin: 2rem 0;
   }
   .primary-navigation.open {
-    left: 50%;
+    left: 0%;
   }
 }
 
 .main {
   margin-top: calc(5 * var(--height));
   z-index: 100;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .banner__btn + .banner__btn {
@@ -271,9 +312,6 @@ button {
 }
 .card {
   width: 100%;
-}
-.card__image {
-  height: 350px;
 }
 .card__image img {
   width: 100%;
@@ -367,4 +405,7 @@ footer {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   flex-direction: column;
+}
+.footer__tagline{
+  color: var(--secondary);
 }
